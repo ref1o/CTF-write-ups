@@ -13,9 +13,10 @@ Ogni write-up documenta la metodologia, gli strumenti e il ragionamento dietro l
 CTF-write-ups/
 ├── README.md
 └── TryHackMe/
-    └── Operation-Checkmate/
-        ├── README.md          # write-up completo
-        └── assets/            # screenshot e immagini (opzionale)
+    ├── Operation-Checkmate/
+    │   └── README.md          # password auditing (5 livelli)
+    └── Cache-Me-Outside/
+        └── README.md          # OSINT investigativo (catena di pivot)
 ```
 
 I write-up sono organizzati per **piattaforma** → **room/sfida**. Ogni sfida ha il proprio `README.md` che si renderizza automaticamente aprendo la cartella su GitHub.
@@ -27,6 +28,7 @@ I write-up sono organizzati per **piattaforma** → **room/sfida**. Ogni sfida h
 | Piattaforma | Sfida | Categoria | Difficoltà |
 |-------------|-------|-----------|------------|
 | TryHackMe | [Operation Checkmate](./TryHackMe/Operation-Checkmate/) | Password Auditing / OSINT | Easy |
+| TryHackMe | [Cache Me Outside](./TryHackMe/Cache-Me-Outside/) | OSINT / Investigazione | Medium |
 
 *(altri in arrivo)*
 
@@ -34,9 +36,16 @@ I write-up sono organizzati per **piattaforma** → **room/sfida**. Ogni sfida h
 
 ## 🛠️ Tecniche & strumenti ricorrenti
 
-Enumerazione e ricognizione: `nmap`, `ffuf`, `gobuster`, `curl` ·
-Attacchi a password: `hydra`, `cupp`, `john`, `hashcat` ·
-OSINT e analisi web · reverse di hash · pivoting tra servizi
+**Enumerazione e ricognizione:** `nmap`, `ffuf`, `curl`
+**Attacchi a password:** `hydra`, `cupp`, wordlist mirate
+**OSINT:** username enumeration (`sherlock`, WhatsMyName), geolocalizzazione da immagini (geoint), analisi metadati (git `.patch`), active OSINT (out-of-office)
+**Analisi:** reverse di hash SHA256, pivoting tra servizi e piattaforme
+
+---
+
+## 🔒 Nota su privacy e spoiler
+
+I write-up a tema OSINT **oscurano i dati personali** (`<REDACTED>`) e quelli password-based mostrano le tecniche mantenendo lo spirito della sfida. L'obiettivo è documentare il **metodo**, non fornire soluzioni pronte o esporre PII.
 
 ---
 
